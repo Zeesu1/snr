@@ -88,7 +88,7 @@ const addFn = async () => {
         type: "input",
         name: "name",
         message: "请输入镜像名称",
-        validate(answer) {
+        validate (answer) {
           const keys = Object.keys(REGISTRIES);
           if (keys.includes(answer)) {
             return `不能起名'${answer}'跟保留字冲突`;
@@ -103,7 +103,7 @@ const addFn = async () => {
         type: "input",
         name: "registry",
         message: "请输入镜像地址",
-        validate(answer) {
+        validate (answer) {
           if (!answer.trim()) {
             return `url 不能为空`;
           }
@@ -149,8 +149,7 @@ const deleteFn = async () => {
         if (curRegistry.trim() == selOrigin.registry.trim()) {
           console.log(
             chalk.red(
-              `当前还在使用该镜像${
-                REGISTRIES[res.registry].registry
+              `当前还在使用该镜像${REGISTRIES[res.registry].registry
               },请切换其他镜像删除`
             )
           );
@@ -189,8 +188,7 @@ const testFn = async (target) => {
       let status = false;
       let isTimeout = false;
       try {
-        // const response = await fetch(registry + PKG.name, { timeout });
-        const response = await fetch(registry + "nrm", { timeout });
+        const response = await fetch(registry + PKG.name, { timeout });
         status = response.ok;
       } catch (error) {
         isTimeout = error.type === "request-timeout";
@@ -222,8 +220,8 @@ const testFn = async (target) => {
       isFastest && !target
         ? chalk.bgGreenBright(time + " ms")
         : isTimeout
-        ? "timeout"
-        : `${time} ms`;
+          ? "timeout"
+          : `${time} ms`;
     if (!success) {
       suffix += isTimeout ? timeoutMsg : errorMsg;
     }

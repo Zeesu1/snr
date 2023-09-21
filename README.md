@@ -1,5 +1,7 @@
-# 用法 Usage
+# snr
 
+## 用法 Usage
+```
 Usage: snr [options] [command]
 
 Options:
@@ -14,3 +16,4 @@ Commands:
   add              自定义镜像
   delete           删除自定义的源
   help [command]   display help for command
+```
