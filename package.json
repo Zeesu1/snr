@@ -1,0 +1,32 @@
+{
+  "name": "@rickx/snr",
+  "version": "0.0.1",
+  "description": "switch npm registry",
+  "main": "./src/index.js",
+  "type": "module",
+  "keywords": [
+    "registry",
+    "npm",
+    "pnpm",
+    "yarn",
+    "cnpm"
+  ],
+  "bin": {
+    "snr": "./src/index.js"
+  },
+  "repository": {
+    "url": "https://github.com/Zeesu1/snr.git",
+    "type": "git"
+  },
+  "author": "rick xie",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.10",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.14"
+  }
+}
