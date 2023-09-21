@@ -1,6 +1,6 @@
 {
   "name": "@rickx/snr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "switch npm registry",
   "main": "./src/index.js",
   "type": "module",
